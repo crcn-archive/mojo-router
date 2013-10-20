@@ -41,7 +41,6 @@ var AppView = mojo.View.extend({
   sections: {
     app: {
       type: "states",
-      route: "app",
       views: [
         { viewClass: HomeView, name: "home" }
       ]
@@ -52,7 +51,6 @@ var MainView = mojo.View.extend({
   sections: { 
     main: {
       type: "states",
-      route: "main",
       views: [
         { viewClass: AppView, name: "app" },
         { viewClass: LoginView, name: "login" }
