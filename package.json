@@ -1,0 +1,25 @@
+{
+  "name": "mojo-router",
+  "version": "0.0.0",
+  "description": "HTTP Router for Mojo.js",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/classdojo/mojo-router.git"
+  },
+  "author": "",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "34afd31232399754e51e62e5954957a3e26b1dd7",
+  "devDependencies": {
+    "coffee-script": "~1.6.3",
+    "expect.js": "~0.2.0",
+    "mocha": "~1.13.0"
+  },
+  "dependencies": {
+    "mediocre": "0.0.1"
+  }
+}
