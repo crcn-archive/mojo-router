@@ -20,6 +20,6 @@
     "mocha": "~1.13.0"
   },
   "dependencies": {
-    "mediocre": "0.0.1"
+    "mediocre": "0.0.x"
   }
 }
