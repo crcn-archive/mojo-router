@@ -19,7 +19,8 @@ routes   = {
       main: "auth",
       auth: "login"
     }
-  }
+  },
+  "pre /login": 
 }
 
 
