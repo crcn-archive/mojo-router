@@ -22,6 +22,7 @@
   "dependencies": {
     "mediocre": "0.0.x",
     "type-component": "0.0.1",
-    "protoclass": "0.0.1"
+    "protoclass": "0.0.1",
+    "crema": "~0.1.5"
   }
 }
