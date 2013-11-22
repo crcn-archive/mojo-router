@@ -9,19 +9,20 @@ router   = require("mojo-router"),
 //http routes
 routes   = {
   "/": {
+    pre: checkSession,
     states: {
       main: "app",
       app: "home"
+    },
+    routes: {
+      "./students/:student",
+      load: {
+        student: loadStudent
+      }
     }
-  },
-  "/login": {
-    states: {
-      main: "auth",
-      auth: "login"
-    }
-  },
-  "pre /login": 
+  }
 }
+
 
 
 //install as a mojo plugin
