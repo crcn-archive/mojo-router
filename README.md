@@ -115,6 +115,10 @@ uses a router plugin
 
 creates a new route
 
+### router.name(name)
+
+sets the name of the router
+
 ### route.enter(fn)
 
 called when the route is entered.
@@ -132,5 +136,8 @@ router.
 
 Similar to enter, but called when the route leaves its state
 
+### route.states(states)
+
+the states to set when hitting this route
 
 
