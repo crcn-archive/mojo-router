@@ -45,6 +45,18 @@ describe("router#", function () {
   /**
    */
 
+  it("can bind to the current route", function (next) {
+    var router = m.router();
+    router.route("/hello/world");
+    router.bind("current").once().to(function () {
+      next();
+    }).now();
+    router.redirect("/hello/world");
+  })
+
+  /**
+   */
+
   it("can call one enter synchronously", function (next) {
     var router = m.router();
 
@@ -221,19 +233,21 @@ describe("router#", function () {
   /**
    */
 
-  it("can set the states of a given route", function () {
+  it("can set the states of a given route", function (next) {
     var router = m.router();
     router.
-      route("/auth")
+      route("/auth").
+      states({
+        name: "test"
+      });
+
+
+    router.redirect("/auth");
+
+    router.bind("current.states").once().to(function (states) {
+      expect(states.name).to.be("test");
+      next();
+    }).now();
   });
 
-  /**
-
-
-  // options check
-  // exit async
-  // exit multiple
-  // set states
-  // emit redirect
-  */
 });
