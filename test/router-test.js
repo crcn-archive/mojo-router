@@ -219,6 +219,15 @@ describe("router#", function () {
   });
 
   /**
+   */
+
+  it("can set the states of a given route", function () {
+    var router = m.router();
+    router.
+      route("/auth")
+  });
+
+  /**
 
 
   // options check

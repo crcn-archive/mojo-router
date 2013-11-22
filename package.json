@@ -1,6 +1,6 @@
 {
   "name": "mojo-router",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "HTTP Router for Mojo.js",
   "main": "./lib/index.js",
   "scripts": {
@@ -22,7 +22,7 @@
   "dependencies": {
     "mediocre": "0.0.x",
     "type-component": "0.0.1",
-    "protoclass": "0.0.1",
+    "protoclass": "0.0.2",
     "crema": "~0.1.5",
     "async": "~0.2.9",
     "flatstack": "0.0.7",
