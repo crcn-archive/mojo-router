@@ -250,4 +250,28 @@ describe("router#", function () {
     }).now();
   });
 
+
+  /**
+   */
+
+  it("cannot redirect to the same route", function (next) {
+    var router = m.router(),
+    c = 0;
+
+    router.route("/hello");
+
+    router.on("redirect", function () {
+      c++;
+    });
+
+    router.redirect("/hello", function () {
+
+    });
+
+    router.redirect("/hello", function () {
+      expect(c).to.be(1);
+      next();
+    })
+  })
+
 });
