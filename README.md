@@ -10,7 +10,7 @@ router       = mojoRouter.router();
 
 // add a parameter that's loaded whenever
 // it's defined in a route
-router.param("user", function (id, next) {
+router.param("user", function (request, next, id) {
   // load user
   // next(null, someUser);
 });
