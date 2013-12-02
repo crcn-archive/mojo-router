@@ -26,12 +26,12 @@
   "dependencies": {
     "mediocre": "0.0.x",
     "type-component": "0.0.1",
-    "protoclass": "0.0.2",
+    "protoclass": "0.0.x",
     "crema": "~0.1.5",
     "async": "~0.2.9",
-    "flatstack": "0.0.7",
-    "comerr": "0.0.6",
-    "bindable": "~0.4.11",
+    "flatstack": "0.0.x",
+    "comerr": "0.0.x",
+    "bindable": "0.4.x",
     "step": "0.0.5",
     "hasher": "~1.2.0"
   }
