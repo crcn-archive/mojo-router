@@ -1,6 +1,6 @@
 {
   "name": "mojo-router",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "HTTP Router for Mojo.js",
   "main": "./lib/index.js",
   "scripts": {
