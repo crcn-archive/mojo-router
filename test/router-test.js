@@ -137,8 +137,8 @@ describe("router#", function () {
     user1 = {},
     user2 = {};
 
-    router.param("user1", function (options, next, id) {
-      expect(options.path).to.be("/hello/user1/user2");
+    router.param("user1", function (request, next, id) {
+      expect(request.toString()).to.be("/hello/user1/user2");
       user1._id = id;
       next(null, user1);
     });
@@ -172,7 +172,7 @@ describe("router#", function () {
     user2 = {};
 
     router.query("user1", function (options, next, id) {
-      expect(options.path).to.be("/hello");
+      expect(options.toString()).to.be("/hello?user1=1&user2=2");
       user1._id = id;
       next(null, user1);
     });
