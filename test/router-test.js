@@ -25,21 +25,26 @@ describe("router#", function () {
   /**
    */
 
-  it("can redirect to many different routes", function () {
-    router.redirect("/hello/world");
-    expect(router.current.name).to.be("helloWorld");
-    router.redirect("/hello/world2");
-    expect(router.current.name).to.be("helloWorld2");
+  it("can redirect to many different routes", function (next) {
+    router.redirect("/hello/world", function () {
+      expect(router.current.name).to.be("helloWorld");
+    });
+    router.redirect("/hello/world2", function () {
+      expect(router.current.name).to.be("helloWorld2");
+      next();
+    });
   });
 
   /**
    */
 
-  it("can redirect by name", function () {
+  it("can redirect by name", function (next) {
     var router = m.router();
     router.route("/hello/world").name("helloWorld");
-    router.redirect("helloWorld");
-    expect(router.current.name).to.be("helloWorld");
+    router.redirect("helloWorld", function () {
+      expect(router.current.name).to.be("helloWorld");
+      next();
+    });
   });
 
   /**
@@ -195,7 +200,6 @@ describe("router#", function () {
   it("can exit a route", function (next) {
     var router = m.router(), states = { enter: {}, exit: {} };
 
-
     router.
       route("/route1").
       enter(function () {
@@ -254,7 +258,7 @@ describe("router#", function () {
   /**
    */
 
-  it("cannot redirect to the same route", function (next) {
+  it("can redirect to the same route", function (next) {
     var router = m.router(),
     c = 0;
 
@@ -269,7 +273,7 @@ describe("router#", function () {
     });
 
     router.redirect("/hello", function () {
-      expect(c).to.be(1);
+      expect(c).to.be(2);
       next();
     })
   })

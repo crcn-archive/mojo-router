@@ -1,4 +1,4 @@
-HTTP Router for Mojo.js
+HTTP Router for Mojo.js [![Alt ci](https://travis-ci.org/classdojo/mojo-router.png)](https://travis-ci.org/classdojo/mojo-router)
 
 ### Installation
 
@@ -10,7 +10,7 @@ router       = mojoRouter.router();
 
 // add a parameter that's loaded whenever
 // it's defined in a route
-router.param("user", function (id, next) {
+router.param("user", function (request, next, id) {
   // load user
   // next(null, someUser);
 });
