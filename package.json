@@ -35,6 +35,7 @@
     "bindable": "0.4.x",
     "step": "0.0.5",
     "hasher": "~1.2.0",
-    "urlgrey": "~0.3.2"
+    "urlgrey": "~0.3.2",
+    "underscore": "~1.5.2"
   }
 }
