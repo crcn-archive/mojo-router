@@ -276,6 +276,25 @@ describe("router#", function () {
       expect(c).to.be(2);
       next();
     })
+  });
+
+  /**
+   */
+
+  it("loads the params in order", function () {
+    var router = m.router(), i = 0;
+    router.route("/a/:class/:student");
+    router.param("class", function (r, n) {
+      expect(i++).to.be(0);
+      n();
+    });
+    router.param("student", function (r, n) {
+      expect(i++).to.be(1);
+      n();
+    });
+
+    router.redirect("/a/1/2");
+    expect(i).to.be(2);
   })
 
 });
