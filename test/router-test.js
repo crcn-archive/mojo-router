@@ -53,9 +53,9 @@ describe("router#", function () {
   it("can bind to the current route", function (next) {
     var router = m.router();
     router.route("/hello/world");
-    router.bind("current").once().to(function () {
+    router.bind("current", { max: 1, to: function () {
       next();
-    }).now();
+    }}).now();
     router.redirect("/hello/world");
   })
 
@@ -248,10 +248,10 @@ describe("router#", function () {
 
     router.redirect("/auth");
 
-    router.bind("current.states").once().to(function (states) {
+    router.bind("current.states", { max: 1, to: function (states) {
       expect(states.name).to.be("test");
       next();
-    }).now();
+    }}).now();
   });
 
 

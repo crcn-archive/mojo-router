@@ -1,6 +1,6 @@
 {
   "name": "mojo-router",
-  "version": "0.0.15",
+  "version": "0.1.0",
   "description": "HTTP Router for Mojo.js",
   "main": "./lib/index.js",
   "scripts": {
@@ -32,7 +32,7 @@
     "async": "~0.2.9",
     "flatstack": "0.0.x",
     "comerr": "0.0.x",
-    "bindable": "0.4.x",
+    "bindable": "0.5.x",
     "step": "0.0.5",
     "hasher": "~1.2.0",
     "urlgrey": "~0.3.2",
