@@ -234,6 +234,22 @@ describe("router#", function () {
     });
   });
 
+
+  it("doesn't call a route twice", function (complete) {
+
+    var router = m.router();
+
+    router.
+      route("/route1").
+      enter(function (r, next) {
+        next();
+        complete();
+      })
+
+    router.redirect("/route1");
+    router.redirect("/route1");
+  })
+
   /**
    */
 
@@ -258,7 +274,7 @@ describe("router#", function () {
   /**
    */
 
-  it("can redirect to the same route", function (next) {
+  xit("can redirect to the same route", function (next) {
     var router = m.router(),
     c = 0;
 
