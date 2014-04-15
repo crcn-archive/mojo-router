@@ -274,21 +274,21 @@ describe("router#", function () {
   /**
    */
 
-  xit("can redirect to the same route", function (next) {
+  it("can redirect to the same route", function (next) {
     var router = m.router(),
     c = 0;
 
-    router.route("/hello");
+    router.route("/hello/:name");
 
     router.on("redirect", function () {
       c++;
     });
 
-    router.redirect("/hello", function () {
+    router.redirect("/hello/bob", function () {
 
     });
 
-    router.redirect("/hello", function () {
+    router.redirect("/hello/job", function () {
       expect(c).to.be(2);
       next();
     })
