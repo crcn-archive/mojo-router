@@ -1,6 +1,6 @@
 {
   "name": "mojo-router",
-  "version": "0.2.2",
+  "version": "0.2.4",
   "description": "",
   "main": "./lib/index.js",
   "scripts": {
@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "kubrik": "0.0.x",
-    "paperclip": "0.3.x"
+    "paperclip": "0.3.x",
+    "mojo-mediator": "0.0.x"
   }
 }
