@@ -1,6 +1,6 @@
 {
   "name": "mojo-router",
-  "version": "0.3.17",
+  "version": "0.3.18",
   "description": "",
   "main": "./lib/index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "kubrik": "0.1.x",
+    "crowbar": "0.1.x",
     "paperclip": "0.3.x",
     "mojo-mediator": "0.0.x",
     "noselector": "0.0.x",
