@@ -1,6 +1,6 @@
 {
   "name": "mojo-router",
-  "version": "0.3.23",
+  "version": "0.3.24",
   "description": "",
   "main": "./lib/index.js",
   "scripts": {
@@ -14,7 +14,8 @@
     "paperclip": "0.3.x",
     "mojo-mediator": "0.0.x",
     "noselector": "0.0.x",
-    "async": "0.7.x"
+    "async": "0.7.x",
+    "janitorjs": "0.0.4"
   },
   "devDependencies": {
     "mojo-application": "0.0.8",
