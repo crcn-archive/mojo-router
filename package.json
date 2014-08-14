@@ -1,6 +1,6 @@
 {
   "name": "mojo-router",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "description": "",
   "main": "./lib/index.js",
   "scripts": {
@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "async": "0.7.x",
+    "bindable": "^0.5.44",
     "crowbar": "0.1.x",
     "flat": "^1.2.1",
     "janitorjs": "0.0.4",
@@ -20,7 +21,9 @@
   },
   "devDependencies": {
     "mojo-application": "0.0.8",
+    "mojo-bootstrap": "0.0.4",
+    "mojo-paperclip": "^0.4.4",
     "mojo-views": "0.0.17",
-    "mojo-bootstrap": "0.0.4"
+    "paperclip": "^0.3.148"
   }
 }
