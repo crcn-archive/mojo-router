@@ -1,6 +1,6 @@
 {
   "name": "mojo-router",
-  "version": "0.4.16",
+  "version": "0.4.17",
   "description": "",
   "main": "./lib/index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "async": "0.7.x",
-    "bindable": "^0.5.44",
+    "bindable": "0.5.x",
     "crowbar": "0.1.x",
     "flat": "^1.2.1",
     "janitorjs": "0.0.4",
