@@ -34,3 +34,22 @@ app.use(router);
 
 The [crowbar](https://github.com/mojo-js/crowbar.js) router instance
 
+```javascript
+application.router.add({
+  "/home": {
+    states: {
+      main: "home",
+      home: "contact"
+    }
+  }
+});
+```
+
+#### application.location
+
+the current location of the router
+
+## Unit Testing
+
+TODO
+
