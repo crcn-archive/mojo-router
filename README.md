@@ -14,3 +14,23 @@ HTTP router which helps maintain application state.
 ## API
 
 **See [crowbar](https://github.com/mojo-js/crowbar.js) for extended documentation**
+
+## Application API
+
+#### router(application)
+
+registers `mojo-router` to the [mojo-application](https://github.com/mojo-js/mojo-application), which will add a few properties
+/ methods onto the application.
+
+```javascript
+var Application = require("mojo-application"),
+router         = require("mojo-router");
+
+var app = new Application();
+app.use(router);
+```
+
+#### application.router
+
+The [crowbar](https://github.com/mojo-js/crowbar.js) router instance
+
