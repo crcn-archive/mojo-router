@@ -10,10 +10,15 @@ HTTP router which helps maintain application state.
 
 - [crowbar](https://github.com/mojo-js/crowbar.js) - routing engine used
 - [paperclip](https://github.com/mojo-js/paperclip.js) - template engine for links
+- [mojo-views](https://github.com/mojo-js/mojo-views)
 
 ## API
 
 **See [crowbar](https://github.com/mojo-js/crowbar.js) for extended documentation**
+
+## Paperclip API
+
+
 
 ## Application API
 
