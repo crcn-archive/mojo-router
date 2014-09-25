@@ -1,6 +1,6 @@
 {
   "name": "mojo-router",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "",
   "main": "./lib/index.js",
   "scripts": {
@@ -17,13 +17,13 @@
     "kubrik": "*",
     "mojo-mediator": "0.0.x",
     "noselector": "0.0.x",
+    "paperclip": "^0.4.11",
     "underscore": "^1.6.0"
   },
   "devDependencies": {
     "mojo-application": "0.0.8",
     "mojo-bootstrap": "0.0.4",
     "mojo-paperclip": "^0.4.4",
-    "mojo-views": "0.0.17",
-    "paperclip": "0.4.x"
+    "mojo-views": "0.0.17"
   }
 }
