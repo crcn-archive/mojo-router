@@ -1,5 +1,5 @@
 {
-  "name": "mojo-routerrr",
+  "name": "mojo-router",
   "version": "0.5.4",
   "description": "",
   "main": "./lib/index.js",
