@@ -1,6 +1,6 @@
 {
   "name": "mojo-router",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "",
   "main": "./lib/index.js",
   "scripts": {
@@ -18,7 +18,6 @@
     "crowbar": "0.2.x",
     "flat": "^1.2.1",
     "janitorjs": "0.0.4",
-    "kubrik": "*",
     "mojo-mediator": "0.0.x",
     "noselector": "0.0.x",
     "paperclip": "^0.4.11",
