@@ -20,7 +20,7 @@
     "janitorjs": "0.0.4",
     "mojo-mediator": "0.1.x",
     "noselector": "0.0.x",
-    "paperclip": "^0.4.11",
+    "paperclip": "0.5.x",
     "underscore": "^1.6.0"
   },
   "devDependencies": {
