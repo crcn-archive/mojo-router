@@ -32,12 +32,12 @@ describe("datahref#", function () {
     });
 
     var view = new views.Base({
-      paper: paperclip.compile("<a data-href='home'>home</a>")
+      paper: "<a data-href='home'>home</a>"
     }, app);
 
     view.render();
 
-    expect(view.render().toString()).to.be('<a data-href="home" href="/home">home</a>');
+    expect(view.render().toString()).to.be('<a href="/home">home</a>');
   });
 
   it("properly fills in a route, even with undefined values", function () {
@@ -50,12 +50,12 @@ describe("datahref#", function () {
 
     var view = new views.Base({
       name: "craig",
-      paper: paperclip.compile("<a data-href='home'>home</a>")
+      paper: "<a data-href='home'>home</a>"
     }, app);
 
     view.render();
 
-    expect(view.render().toString()).to.be('<a data-href="home" href="/hello/craig/undefined">home</a>');
+    expect(view.render().toString()).to.be('<a href="/hello/craig/undefined">home</a>');
   });
 
   it("properly fills in routes with dot-syntax", function () {
@@ -71,12 +71,12 @@ describe("datahref#", function () {
         first: "a",
         last: "b"
       },
-      paper: paperclip.compile("<a data-href='home'>home</a>")
+      paper: "<a data-href='home'>home</a>"
     }, app);
 
     view.render();
 
-    expect(view.render().toString()).to.be('<a data-href="home" href="/hello/a/b">home</a>');
+    expect(view.render().toString()).to.be('<a href="/hello/a/b">home</a>');
   });
 
   it("changes the link as properties change on the view", function () {
@@ -93,14 +93,14 @@ describe("datahref#", function () {
         first: "a",
         last: "b"
       },
-      paper: paperclip.compile("<a data-href='home'>home</a>")
+      paper: "<a data-href='home'>home</a>"
     }, app);
 
     view.render();
 
-    expect(view.render().toString()).to.be('<a data-href="home" href="/hello/a/b">home</a>');
+    expect(view.render().toString()).to.be('<a href="/hello/a/b">home</a>');
     view.set("name.first", "c");
-    expect(view.render().toString()).to.be('<a data-href="home" href="/hello/c/b">home</a>');
+    expect(view.render().toString()).to.be('<a href="/hello/c/b">home</a>');
 
   });
 
@@ -115,16 +115,16 @@ describe("datahref#", function () {
     app.router.redirect("/hello/a");
 
     var view = new views.Base({
-      paper: paperclip.compile("<a data-href='home'>home</a>")
+      paper: "<a data-href='home'>home</a>"
     }, app);
 
     view.render();
 
-    expect(view.render().toString()).to.be('<a data-href="home" href="/hello/a">home</a>');
+    expect(view.render().toString()).to.be('<a href="/hello/a">home</a>');
     app.router.redirect("/hello/c");
-    expect(view.render().toString()).to.be('<a data-href="home" href="/hello/c">home</a>');
+    expect(view.render().toString()).to.be('<a href="/hello/c">home</a>');
     view.set("name", "d");
-    expect(view.render().toString()).to.be('<a data-href="home" href="/hello/d">home</a>');
+    expect(view.render().toString()).to.be('<a href="/hello/d">home</a>');
   });
 
   it("can internally redirect anchor links of the location matches a certain case", function () {
@@ -145,14 +145,14 @@ describe("datahref#", function () {
     app.router.redirect("/es-MX/home");
 
     var view = new views.Base({
-      paper: paperclip.compile("<a data-href='home'>home</a>")
+      paper: "<a data-href='home'>home</a>"
     }, app);
 
     view.render();
 
-    expect(view.render().toString()).to.be('<a data-href="home" href="/es-MX/home">home</a>');
+    expect(view.render().toString()).to.be('<a href="/es-MX/home">home</a>');
 
     app.router.redirect("/en-US/home");
-    expect(view.render().toString()).to.be('<a data-href="home" href="/home">home</a>');
+    expect(view.render().toString()).to.be('<a href="/home">home</a>');
   });
 });
